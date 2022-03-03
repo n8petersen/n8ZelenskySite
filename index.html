@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Nathan's Website</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+      body,h1,h2,h3,h4,h5,h6,p {
+	    font-family: "Open Sans";
+        sans-serif;
+		color: #0057b7;
+		font-weight: 900;
+		text-shadow: -1px 0 #ffd700, 0 1px #ffd700, 1px 0 #ffd700, 0 -1px #ffd700;
+        }
+	  
+	  h1 span, h2 span, p span {
+	    background-color: white;
+	    }
+	  
+	  body {
+        height: 100%;
+		background: linear-gradient(90deg, #ffd700 50%, #0057b7 50%);
+	    }
+	  
+	  
+    </style>
+  </head>
+
+  <body>
+    <h1> <span> Nathan Petersen's Zelensky Fan Page </span> </h1>
+    <h2> <span> Welcome to my wonderful website, dedicated to our hero, Zelensky </span> </h2>
+    <p> <span> He is my favorite, наш герой і президент. Look at him: </span> </p>
+	<img src="https://imageio.forbes.com/specials-images/imageserve/621e97eb4db04c15edc4fce1/0x0.jpg?format=jpg&width=1200&fit=bounds" alt="Zelensky" width=450 height=300>
+	<p> <span> Do you support our hero and president, Zelensky? </span> </p>
+	<input type ="button" value="Yes! Of course!" onclick="Support();">
+	<input type ="button" value="No! Я дурак!" onclick="NotSupport();">
+	
+	<script>
+	function Support() {
+	  alert("Yes! Thank you good sir, дякую!");
+	}
+	
+	function NotSupport() {
+	  alert("Well, at least we can both agree що, ти дурак");
+	}
+	
+	</script>
+  </body>
+</html>
