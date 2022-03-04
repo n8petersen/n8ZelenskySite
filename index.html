@@ -34,25 +34,47 @@ body {
   <p> <span> He is my favorite, наш герой і президент. Look at him: </span> </p>
   <img src="https://imageio.forbes.com/specials-images/imageserve/621e97eb4db04c15edc4fce1/0x0.jpg?format=jpg&width=1200&fit=bounds" alt="Zelensky" width=450 height=300>
   <p> <span> Do you support our hero and president, Zelensky? </span> </p>
-  <input type ="button" value="Yes! Of course!" onclick="Support();">
-  <input type ="button" value="No! Я дурак!" onclick="NotSupport();">
-	
+  <input type ="button" value="Yes! Of course!" onclick="support();">
+  <input type ="button" value="No! Я дурак!" onclick="notSupport();">
+  <br>
+  <video id="videoZ" loop>
+  </video>
+
 <script>
-  function Support() {
+  function support() {
     alert("Yes! Thank you good sir, дякую!");
+    playZelensky();
   }
 	
-  function NotSupport() {
+  function notSupport() {
+    let video;
+
     alert("Well, at least we can both agree що, ти дурак");
 
     if (confirm("Now, are you sure about your choice?")) {
       alert("I am sorry, you have done this yourself.");
-      window.open(
-        "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+      playRickRoll();
+
     } else {
       alert("good choice. Слава Україні!");
+      playZelensky();
+      }
     }
-    }
+
+  function playZelensky() {
+    document.getElementById("videoZ").innerHTML = "<source src ='./zelensky.mp4' type='video/mp4'>";
+    videoZ.setAttribute('height', '360px');
+    videoZ.setAttribute('width', '288px');
+    videoZ.play();
+
+  }
+
+  function playRickRoll() {
+    document.getElementById("videoZ").innerHTML = "<source src ='./rickroll.mp4' type='video/mp4'>";
+    videoZ.setAttribute('height', '360');
+    videoZ.setAttribute('width', '640');
+    videoZ.play();
+  }
 	
 </script>
 </body>
