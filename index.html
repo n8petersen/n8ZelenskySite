@@ -43,11 +43,15 @@ body {
   <p> <span> Do you support our hero and president, Zelensky? </span> </p>
   <input type ="button" value="yes! of course!" onclick="support();">
   <input type ="button" value="no! I'm dumb!" onclick="notSupport();">
+  
   <br>
+  
+  <!-- Video -->
   <video id="videoZ" loop> 
     <source id='videoSource' src='' type=''>
   </video>
 
+  <!-- Text area for letters -->
   <p> write a love letter to zelensky: </p>
   <textarea id="letter" rows="4" cols="50"> </textarea> 
   <br>
@@ -89,9 +93,9 @@ body {
     videoZ.play();
   }
 
+  // Love letters - doesn't actually submit anything, it just clears the text area.
   var input = document.querySelector('#submit');
   var textarea = document.querySelector('#letter');
-
   input.addEventListener('click', function () {
     textarea.value = '';
     alert("thank u for ur letter, we sent it to zelensky <3");
