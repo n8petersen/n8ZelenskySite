@@ -36,13 +36,13 @@ body {
 <body>
   <h1> <span> Zelensky Fan Page </span> </h1>
   <h2> <span> Welcome to my wonderful website, dedicated to our hero, Zelensky </span> </h2>
-  <p> <span> He is my favorite, наш герой і президент. Look at him: </span> </p>
+  <p> <span> He is my favorite, our hero and president. Look at him: </span> </p>
   <img src="https://imageio.forbes.com/specials-images/imageserve/621e97eb4db04c15edc4fce1/0x0.jpg?format=jpg&width=1200&fit=bounds" alt="Zelensky" width=450 height=300>
   
   <!-- Buttons -->
   <p> <span> Do you support our hero and president, Zelensky? </span> </p>
-  <input type ="button" value="Yes! Of course!" onclick="support();">
-  <input type ="button" value="No! Я дурак!" onclick="notSupport();">
+  <input type ="button" value="yes! of course!" onclick="support();">
+  <input type ="button" value="no! I'm dumb!" onclick="notSupport();">
   <br>
   <video id="videoZ" loop> 
     <source id='videoSource' src='' type=''>
@@ -55,21 +55,21 @@ body {
 
 <script>
   function support() {
-    alert("Yes! Thank you good sir, дякую!");
+    alert("yes! thank you good sir! glory to Ukraine!");
     playZelensky();
   }
 	
   function notSupport() {
     let video;
 
-    alert("Well, at least we can both agree що, ти дурак");
+    alert("well, at least we can both agree that ur dumb");
 
-    if (confirm("Now, are you sure about your choice?")) {
-      alert("I am sorry, you have done this yourself.");
+    if (confirm("now, are you sure about your choice?")) {
+      alert("i am sorry, you have done this yourself.");
       playRickRoll();
 
     } else {
-      alert("good choice. Слава Україні!");
+      alert("good choice. Glory to Ukraine!");
       playZelensky();
       }
     }
@@ -83,7 +83,7 @@ body {
   }
 
   function playRickRoll() {
-    document.getElementById("videoZ").innerHTML = "<source src ='./rickroll.mp4' type='video/mp4'>";
+    document.getElementById("videoZ").innerHTML = "<source src ='./othervideo.mp4' type='video/mp4'>";
     videoZ.setAttribute('height', '360');
     videoZ.setAttribute('width', '640');
     videoZ.play();
