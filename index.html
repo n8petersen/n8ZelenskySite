@@ -10,7 +10,6 @@
 <style>
 body,h1,h2,h3,h4,h5,h6,p {
   font-family: "Open Sans";
-  sans-serif;
   color: #0057b7;
   font-weight: 900;
   text-shadow: -1px 0 #ffd700, 0 1px #ffd700, 1px 0 #ffd700, 0 -1px #ffd700;
@@ -45,7 +44,15 @@ body {
 	
   function NotSupport() {
     alert("Well, at least we can both agree що, ти дурак");
-  }
+
+    if (confirm("Now, are you sure about your choice?")) {
+      alert("I am sorry, you have done this yourself.");
+      window.open(
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+    } else {
+      alert("good choice. Слава Україні!");
+    }
+    }
 	
 </script>
 </body>
