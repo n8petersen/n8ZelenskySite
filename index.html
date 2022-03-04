@@ -1,13 +1,16 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Nathan's Website</title>
 
+<title>We luv Zelensky </title>
+
+<!-- links needed for font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
 <style>
+/* Text font, color, and shadow */
 body,h1,h2,h3,h4,h5,h6,p {
   font-family: "Open Sans";
   color: #0057b7;
@@ -15,10 +18,12 @@ body,h1,h2,h3,h4,h5,h6,p {
   text-shadow: -1px 0 #ffd700, 0 1px #ffd700, 1px 0 #ffd700, 0 -1px #ffd700;
   }
 	  
+/* White Text Background */
 h1 span, h2 span, p span {
   background-color: white;
   }
 	  
+/* Ukraine Flag Background */
 body {
   height: 100%;
   background: linear-gradient(90deg, #ffd700 50%, #0057b7 50%);
@@ -29,16 +34,24 @@ body {
 </head>
 
 <body>
-  <h1> <span> Nathan Petersen's Zelensky Fan Page </span> </h1>
+  <h1> <span> Zelensky Fan Page </span> </h1>
   <h2> <span> Welcome to my wonderful website, dedicated to our hero, Zelensky </span> </h2>
   <p> <span> He is my favorite, наш герой і президент. Look at him: </span> </p>
   <img src="https://imageio.forbes.com/specials-images/imageserve/621e97eb4db04c15edc4fce1/0x0.jpg?format=jpg&width=1200&fit=bounds" alt="Zelensky" width=450 height=300>
+  
+  <!-- Buttons -->
   <p> <span> Do you support our hero and president, Zelensky? </span> </p>
   <input type ="button" value="Yes! Of course!" onclick="support();">
   <input type ="button" value="No! Я дурак!" onclick="notSupport();">
   <br>
-  <video id="videoZ" loop>
+  <video id="videoZ" loop> 
+    <source id='videoSource' src='' type=''>
   </video>
+
+  <p> write a love letter to zelensky: </p>
+  <textarea id="letter" rows="4" cols="50"> </textarea> 
+  <br>
+  <input id="submit" type ="button" value="Send <3" onclick="submitLetter();">
 
 <script>
   function support() {
@@ -62,9 +75,9 @@ body {
     }
 
   function playZelensky() {
-    document.getElementById("videoZ").innerHTML = "<source src ='./zelensky.mp4' type='video/mp4'>";
-    videoZ.setAttribute('height', '360px');
-    videoZ.setAttribute('width', '288px');
+    document.getElementById("videoZ").innerHTML = "<source id='videoSource' src ='./zelensky.mp4' type='video/mp4'>";
+    videoZ.setAttribute('height', '360');
+    videoZ.setAttribute('width', '288');
     videoZ.play();
 
   }
@@ -75,6 +88,15 @@ body {
     videoZ.setAttribute('width', '640');
     videoZ.play();
   }
+
+  var input = document.querySelector('#submit');
+  var textarea = document.querySelector('#letter');
+
+  input.addEventListener('click', function () {
+    textarea.value = '';
+    alert("thank u for ur letter, we sent it to zelensky <3");
+  }, false);
+
 	
 </script>
 </body>
